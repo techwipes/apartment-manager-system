@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Apartment Manager System</title>
+</head>
+<body>
+<div>
+    <h1> Account List </h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Account Number</th>
+            <th>Owner Name</th>
+            <th>Owner Last Name</th>
+            <th>Apartment Number</th>
+            <th>Balance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="account : ${listAccounts}">
+            <td th:text="${account.accountNumber}"></td>
+            <td th:text="${account.ownerName}"></td>
+            <td th:text="${account.ownerLastName}"></td>
+            <td th:text="${account.accountNumber}"></td>
+            <td th:text="${account.apartmentNumber}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
