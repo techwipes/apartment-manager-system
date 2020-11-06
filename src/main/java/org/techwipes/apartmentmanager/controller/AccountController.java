@@ -50,5 +50,12 @@ public class AccountController {
 
     }
 
+    @GetMapping("/deleteAccount/{id}")
+    public String deleteAccount(@PathVariable(value = "id") long id) {
+        //call delete account method
+        this.accountService.deleteAccountById(id);
+        return ("redirect:/");
+    }
+
 
 }
