@@ -17,15 +17,19 @@
     <form action="#" th:action="@{/saveAccount}" th:object="${account}"
           method="POST">
 
-        <input type="text" th:field="*{accountNumber}"
+        <input required type="text" th:field="*{accountNumber}"
+               placeholder="Account Number" class="form-control mb-4 col-4">
+
+        <input required type="text" th:field="*{ownerName}"
                placeholder="Owner Name" class="form-control mb-4 col-4">
-        <input type="text" th:field="*{ownerName}"
-               placeholder="Owner Last Name" class="form-control mb-4 col-4">
-        <input type="text" th:field="*{ownerLastName}"
+
+        <input required type="text" th:field="*{ownerLastName}"
                placeholder="Owner First Name" class="form-control mb-4 col-4">
-        <input type="text" th:field="*{apartmentNumber}"
+
+        <input required type="text" th:field="*{apartmentNumber}"
                placeholder="Apartment Number" class="form-control mb-4 col-4">
-        <input type="text" th:field="*{balance}"
+
+        <input required type="text" th:field="*{balance}"
                placeholder="Balance" class="form-control mb-4 col-4">
 
         <button type="submit" class="btn btn-info col-2"> Save Account</button>
