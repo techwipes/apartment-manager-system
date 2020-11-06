@@ -8,4 +8,6 @@ public interface AccountService {
     List<Account> getAllAccounts();
 
     void saveAccount(Account account);
+
+    Account getAccountById(long id);
 }
