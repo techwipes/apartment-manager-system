@@ -32,8 +32,8 @@
             <td th:text="${account.accountNumber}"></td>
             <td th:text="${account.ownerName}"></td>
             <td th:text="${account.ownerLastName}"></td>
-            <td th:text="${account.accountNumber}"></td>
             <td th:text="${account.apartmentNumber}"></td>
+            <td th:text="${account.balance}"></td>
             <td>
                 <a th:href="@{/showFormForUpdate/{id}(id=${account.id})}" class="btn btn-primary">Update</a>
                 <a th:href="@{/deleteAccount/{id}(id=${account.id})}" class="btn btn-danger">Delete</a>
