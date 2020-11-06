@@ -51,21 +51,19 @@ public class Account {
         this.balance = balance;
     }
 
-    public Integer getAccount_number() {
+    public Integer getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccount_number(Integer account_number) {
-        this.accountNumber = account_number;
+    public void setAccountNumber(Integer accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
-    public Integer getApartment_number() {
+    public Integer getApartmentNumber() {
         return apartmentNumber;
     }
 
-    public void setApartment_number(Integer apartment_number) {
-        this.apartmentNumber = apartment_number;
+    public void setApartmentNumber(Integer apartmentNumber) {
+        this.apartmentNumber = apartmentNumber;
     }
-
-
 }
