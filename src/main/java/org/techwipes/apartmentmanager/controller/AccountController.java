@@ -41,12 +41,12 @@ public class AccountController {
 
     @GetMapping("/showFormForUpdate/{id}")
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
-       //get account from the service
+        //get account from the service
         Account account = accountService.getAccountById(id);
 
         //set account object to the model
         model.addAttribute("account", account);
-        return "update_employee";
+        return "update_account";
 
     }
 
