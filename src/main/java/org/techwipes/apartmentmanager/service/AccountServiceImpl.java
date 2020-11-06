@@ -35,4 +35,9 @@ public class AccountServiceImpl implements AccountService {
         return account;
 
     }
+
+    @Override
+    public void deleteAccountById(long id) {
+        this.accountRepository.deleteById(id);
+    }
 }

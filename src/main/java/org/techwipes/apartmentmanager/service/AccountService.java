@@ -10,4 +10,6 @@ public interface AccountService {
     void saveAccount(Account account);
 
     Account getAccountById(long id);
+
+    void deleteAccountById(long id);
 }
