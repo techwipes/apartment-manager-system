@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface AccountService {
     List<Account> getAllAccounts();
+
+    void saveAccount(Account account);
 }
