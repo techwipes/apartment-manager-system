@@ -30,9 +30,9 @@ public class AccountServiceImpl implements AccountService {
     public Account getAccountById(long id) {
         Optional<Account> optional = accountRepository.findById(id);
         Account account = null;
-        if(optional.isPresent()){
+        if (optional.isPresent()) {
             account = optional.get();
-        }else{
+        } else {
             throw new RuntimeException("Account not found for id: " + id);
         }
         return account;
@@ -46,7 +46,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Page<Account> findPaginated(int pageNo, int pageSize) {
-        Pageable pageable = PageRequest.of(pageNo - 1 ,pageSize);
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
         return this.accountRepository.findAll(pageable);
     }
 }
