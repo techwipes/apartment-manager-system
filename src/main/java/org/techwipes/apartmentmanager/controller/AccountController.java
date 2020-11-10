@@ -20,7 +20,7 @@ public class AccountController {
     //display list of accounts
     @GetMapping("/")
     public String viewHomePage(Model model) {
-        return findPaginated(1, "apartmentNumber", "asc", model);
+        return findPaginated(1, "ownerLastName", "asc", model);
 
     }
 
@@ -73,11 +73,12 @@ public class AccountController {
         model.addAttribute("currentPage", pageNo);
         model.addAttribute("totalPages", page.getTotalPages());
         model.addAttribute("totalItems", page.getTotalElements());
-        model.addAttribute("listAccounts", listAccounts);
 
         model.addAttribute("sortField", sortField);
         model.addAttribute("sortDir", sortDir);
         model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
+
+        model.addAttribute("listAccounts", listAccounts);
 
         return "index";
 
