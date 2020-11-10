@@ -15,5 +15,5 @@ public interface AccountService {
 
     void deleteAccountById(long id);
 
-    Page<Account> findPaginated(int pageNo, int pageSize);
+    Page<Account> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection);
 }
