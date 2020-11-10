@@ -23,8 +23,8 @@ public class AccountController {
     //display list of accounts
     @GetMapping("/")
     public String viewHomePage(Model model) {
-        model.addAttribute("listAccounts", accountService.getAllAccounts());
-        return "index";
+    return findPaginated(1, model);
+
     }
 
     @GetMapping("/showNewAccountForm")
