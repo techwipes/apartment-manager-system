@@ -55,6 +55,7 @@ public class AccountController {
         //call delete account method
         this.accountService.deleteAccountById(id);
         return ("redirect:/");
+
     }
 
 
