@@ -1,6 +1,9 @@
 package org.techwipes.apartmentmanager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.techwipes.apartmentmanager.model.Account;
 import org.techwipes.apartmentmanager.repository.AccountRepository;
@@ -39,5 +42,11 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void deleteAccountById(long id) {
         this.accountRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Account> findPaginated(int pageNo, int pageSize) {
+        Pageable pageable = PageRequest.of(pageNo - 1 ,pageSize);
+        return this.accountRepository.findAll(pageable);
     }
 }
